@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <link rel="stylesheet" href="{% static 'home.css'%}">
+</head>
+<body>
+    <div id="employee">
+        <form action="/employee">
+            <input type="submit" id="btn" value="EMPLOYEE">
+        </form>
+    </div>
+    <div id="company">
+        <form action="/company">
+            <input type="submit" id="btn" value="COMPANY">
+        </form>
+    </div>
+    <div id="searchemp">
+        <form action="/searchemp">
+            <input type="submit" id="btn" value="SEARCH EMPLOYEE">
+        </form>
+    </div>
+    <div id="searchcom">
+        <form action="/searchcom">
+            <input type="submit" id="btn" value="SEARCH COMPANY">
+        </form>
+    </div>
+</body>
+</html>

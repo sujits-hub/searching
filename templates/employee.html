@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>employee</title>
+    <link rel="stylesheet" href="{% static 'employee.css'%}">
+</head>
+<body>
+    <a href="/">HOME</a>
+    {{msg}}
+    <div id="heading">
+        <h1>Enter Employee Data</h1>
+    </div>
+    <div id="content">
+        <form action="/employeedata">
+            <h3>Employee ID   : <input type="text"  name="employee_id"></h3>
+            <h3> Name   : <input type="text"  name="name"></h3>
+            <h3>Age   : <input type="text"  name="age"></h3>
+            <h3>Mobile NO: <input type="text"  name="mobile_no"></h3>
+            <h3>City   : <input type="text"  name="city"></h3>
+            <input type="submit" id="btn" value="SUBMIT">
+        </form>
+    </div>
+</body>
+</html>

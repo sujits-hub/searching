@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>view employee data</title>
+</head>
+<body>
+    <table border="1px">
+         {%for d in empdata%}
+         <tr>
+             <td>{{d.employee_id}}</td>
+             <td>{{d.name}}</td>
+             <td>{{d.age}}</td>
+             <td>{{d.mobile_no}}</td>
+             <td>{{d.city}}</td>
+             
+         </tr>
+         {%endfor%}
+         <h3>total employees are:{{cnt}}</h3>
+    </table>
+</body>
+</html>

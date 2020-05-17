@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>employee search</title>
+    <link rel="stylesheet" href="{% static 'searchemp.css'%}">
+</head>
+<body>
+    <a href="/">HOME</a>
+    <div id="heading">
+        
+        <form action="/searchempdata">
+          <h2>Enter some data: <input type="text" name="data">&nbsp;<input type="submit" value="submit"></h2>
+        </form>
+    </div>
+    <form action="/viewempdata">
+        <input type="submit" id="btn" value="View Employee Data">
+
+    </form>
+    <table border="1px">
+        {%for i in info%}
+        <tr>
+            <td>{{i.employee_id}}</td>
+            <td>{{i.name}}</td>
+            <td>{{i.age}}</td>
+            <td>{{i.mobile_no}}</td>
+            <td>{{i.city}}</td>
+        </tr>
+        {%endfor%}
+    </table>
+</body>
+</html>

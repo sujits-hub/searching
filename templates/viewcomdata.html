@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>view company data</title>
+</head>
+<body>
+    <table border="1px">
+         {%for d in comdata%}
+         <tr>
+             <td>{{d.job_profile_id}}</td>
+             <td>{{d.job_profile}}</td>
+             <td>{{d.salary}}</td>
+             <td>{{d.employee_id}}</td>
+             
+         </tr>
+         {%endfor%}
+         <h3>total company records are:{{cnt}}</h3>
+    </table>
+</body>
+</html>
